@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elena Smith — репетитор английского</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <p class="demo-banner">Демо-концепт. Не действующие уроки и не реальный репетитор.</p>
+  <header class="top">
+    <a class="logo" href="#top">Elena Smith</a>
+    <nav class="nav" id="nav">
+      <a href="#directions">Направления</a>
+      <a href="#quiz">Квиз</a>
+      <a href="#prices">Цены</a>
+      <a href="#book">Пробный</a>
+    </nav>
+    <a class="top__cta" href="#book">Пробный урок</a>
+    <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false"><span></span></button>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div>
+        <p class="badge">Online · Zoom / Google Meet</p>
+        <h1>Английский, который реально заговорит с вами</h1>
+        <p class="lead">Индивидуальные занятия для взрослых: работа, IELTS, разговорная практика.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="#book">Записаться на пробный</a>
+          <a class="btn btn--ghost" href="#quiz">Пройти квиз</a>
+        </div>
+      </div>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1000&q=80" alt="Преподаватель" width="1000" height="1200" />
+      </figure>
+    </section>
+
+    <div class="ticker" aria-hidden="true"><div class="ticker__track">
+      <span>Speaking</span><span>·</span><span>Business</span><span>·</span><span>IELTS</span><span>·</span><span>Vocabulary</span><span>·</span><span>Pronunciation</span><span>·</span>
+      <span>Speaking</span><span>·</span><span>Business</span><span>·</span><span>IELTS</span><span>·</span><span>Vocabulary</span><span>·</span><span>Pronunciation</span><span>·</span>
+    </div></div>
+
+    <section class="wrap" id="directions">
+      <div class="section-head reveal"><h2>Направления</h2></div>
+      <div class="dir-grid">
+        <article class="reveal"><h3>Разговорный</h3><p>Уверенность в диалогах</p></article>
+        <article class="reveal"><h3>Business English</h3><p>Письма, созвоны, презентации</p></article>
+        <article class="reveal"><h3>IELTS / ЕГЭ</h3><p>Стратегии и mock-тесты</p></article>
+        <article class="reveal"><h3>С нуля</h3><p>Мягкий старт без стыда</p></article>
+      </div>
+    </section>
+
+    <section class="wrap" id="quiz">
+      <div class="quiz reveal">
+        <h2>Мини-квиз: что вам ближе?</h2>
+        <p class="muted">3 вопроса — подскажу направление.</p>
+        <div id="quiz-box">
+          <p class="q" id="q-text">1/3. Где вам нужен английский больше всего?</p>
+          <div class="q-actions" id="q-actions">
+            <button type="button" data-a="speak">В путешествиях / общении</button>
+            <button type="button" data-a="biz">На работе</button>
+            <button type="button" data-a="exam">Для экзамена</button>
+            <button type="button" data-a="zero">Вообще с нуля</button>
+          </div>
+        </div>
+        <p class="quiz-result" id="quiz-result" hidden></p>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="section-head reveal"><h2>О преподавателе</h2></div>
+      <div class="about reveal">
+        <ul>
+          <li>CELTA, опыт 6 лет</li>
+          <li>C2 English, стажировка в Лондоне</li>
+          <li>200+ учеников, оценка 4.9</li>
+        </ul>
+        <p>Много говорения: минимум теории, максимум реальных сценариев.</p>
+      </div>
+    </section>
+
+    <section class="wrap" id="prices">
+      <div class="section-head reveal"><h2>Стоимость</h2></div>
+      <div class="price-grid">
+        <article class="reveal"><h3>Пробный</h3><p>25 минут</p><p class="price">0 ₽</p></article>
+        <article class="reveal featured"><h3>Индивидуально</h3><p>55 минут · Zoom</p><p class="price">2 200 ₽</p></article>
+        <article class="reveal"><h3>Пакет 8 уроков</h3><p>Скидка 10%</p><p class="price">15 800 ₽</p></article>
+      </div>
+    </section>
+
+    <section class="wrap" id="book">
+      <div class="book reveal">
+        <h2>Пробный урок</h2>
+        <form class="form" id="book-form">
+          <label>Имя<input name="name" required /></label>
+          <label>Telegram / email<input name="contact" required /></label>
+          <label>Цель<select name="goal" required><option value="">Выберите</option><option>Разговорный</option><option>Business</option><option>IELTS</option><option>С нуля</option></select></label>
+          <button class="btn btn--primary" type="submit">Записаться</button>
+          <p class="form-note" hidden>Заявка принята — демо.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><span>Elena Smith · демо</span><span>Online</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

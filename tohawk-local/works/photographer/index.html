@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Марк Орлов — фотограф</title>
+  <meta name="description" content="Свадьбы, портреты, репортаж. Минималистичная съёмка с акцентом на свет." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+  <p class="demo-banner" role="note">Демо-концепт для портфолио. Не действующая студия и не реальный фотограф.</p>
+
+  <header class="top">
+    <a class="logo" href="#top">MARK ORLOV</a>
+    <nav class="nav" id="nav" aria-label="Меню">
+      <a href="#gallery">Галерея</a>
+      <a href="#about">Обо мне</a>
+      <a href="#prices">Цены</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contact">Связаться</a>
+    </nav>
+    <a class="top__cta" href="#contact">Записаться</a>
+    <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false" aria-controls="nav">
+      <span></span>
+    </button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__media" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=80"
+          alt=""
+          width="1800"
+          height="1200"
+        />
+        <div class="hero__veil"></div>
+      </div>
+      <div class="hero__copy">
+        <p class="eyebrow">Фотограф · Москва</p>
+        <p class="hero__brand">MARK ORLOV</p>
+        <h1>Свет, характер и кадр без лишнего</h1>
+        <p class="hero__lead">Снимаю свадьбы, портреты и репортажи. Быстрая отдача превью и чистая цветокоррекция.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#gallery">Смотреть работы</a>
+          <a class="btn btn--ghost" href="#prices">Прайс</a>
+        </div>
+      </div>
+      <a class="hero__scroll" href="#gallery" aria-label="К галерее">
+        <span>scroll</span>
+      </a>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>Свадьбы</span><span>·</span>
+        <span>Love story</span><span>·</span>
+        <span>Портрет</span><span>·</span>
+        <span>Репортаж</span><span>·</span>
+        <span>Деловая съёмка</span><span>·</span>
+        <span>Превью в день съёмки</span><span>·</span>
+        <span>Свадьбы</span><span>·</span>
+        <span>Love story</span><span>·</span>
+        <span>Портрет</span><span>·</span>
+        <span>Репортаж</span><span>·</span>
+        <span>Деловая съёмка</span><span>·</span>
+        <span>Превью в день съёмки</span><span>·</span>
+      </div>
+    </div>
+
+    <section class="gallery" id="gallery">
+      <div class="section-head reveal">
+        <p class="eyebrow">Портфолио</p>
+        <h2>Галерея</h2>
+        <p class="section-lead">Фильтр по формату — кликните фото, чтобы открыть крупно.</p>
+      </div>
+
+      <div class="filters reveal" role="tablist" aria-label="Фильтр галереи">
+        <button type="button" class="chip is-active" data-filter="all" aria-selected="true">Все</button>
+        <button type="button" class="chip" data-filter="wedding" aria-selected="false">Свадьбы</button>
+        <button type="button" class="chip" data-filter="portrait" aria-selected="false">Портрет</button>
+        <button type="button" class="chip" data-filter="report" aria-selected="false">Репортаж</button>
+      </div>
+
+      <div class="gallery__grid">
+        <button type="button" class="shot reveal" data-cat="wedding" data-full="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=80">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80" alt="Свадебный кадр" width="900" height="1125" loading="lazy" />
+          <span class="shot__cap">Свадьба</span>
+        </button>
+        <button type="button" class="shot shot--wide reveal" data-cat="portrait" data-full="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1600&q=80">
+          <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80" alt="Портрет" width="1200" height="800" loading="lazy" />
+          <span class="shot__cap">Портрет</span>
+        </button>
+        <button type="button" class="shot reveal" data-cat="report" data-full="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1600&q=80">
+          <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80" alt="Репортаж" width="900" height="1125" loading="lazy" />
+          <span class="shot__cap">Репортаж</span>
+        </button>
+        <button type="button" class="shot reveal" data-cat="wedding" data-full="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1600&q=80">
+          <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=900&q=80" alt="Детали" width="900" height="1125" loading="lazy" />
+          <span class="shot__cap">Детали</span>
+        </button>
+        <button type="button" class="shot shot--wide reveal" data-cat="wedding" data-full="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=1600&q=80">
+          <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=1200&q=80" alt="Свадебная пара" width="1200" height="800" loading="lazy" />
+          <span class="shot__cap">Love story</span>
+        </button>
+        <button type="button" class="shot reveal" data-cat="portrait" data-full="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=1600&q=80">
+          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=900&q=80" alt="Студийный портрет" width="900" height="1125" loading="lazy" />
+          <span class="shot__cap">Студия</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about__grid">
+        <div class="about__copy reveal">
+          <p class="eyebrow">Обо мне</p>
+          <h2>10 лет в кадре — без «улыбнитесь в камеру»</h2>
+          <p>Работаю спокойно: ищу живые моменты и точный свет. Превью часто отдаю в тот же вечер, готовый материал — без затягиваний.</p>
+          <ul class="about__list">
+            <li><span>01</span>Свадьбы и love story</li>
+            <li><span>02</span>Портреты и деловые съёмки</li>
+            <li><span>03</span>Репортаж мероприятий</li>
+          </ul>
+          <div class="about__stats">
+            <div><strong data-count="10">0</strong><span>лет опыта</span></div>
+            <div><strong data-count="280">0</strong><span>съёмок</span></div>
+            <div><strong>24ч</strong><span>превью</span></div>
+          </div>
+        </div>
+        <figure class="about__photo reveal">
+          <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=1000&q=80" alt="Фотограф за работой" width="1000" height="1200" loading="lazy" />
+          <figcaption>На площадке · естественный свет</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="prices" id="prices">
+      <div class="section-head reveal">
+        <p class="eyebrow">Прайс</p>
+        <h2>Цены</h2>
+        <p class="section-lead">Ориентир. Точную смету скажу по дате и формату.</p>
+      </div>
+      <div class="price-grid">
+        <article class="price-card reveal">
+          <h3>Портрет</h3>
+          <p>1 час · 30 фото в обработке</p>
+          <p class="price-card__value">8 000 ₽</p>
+          <a class="btn btn--ghost" href="#contact">Выбрать</a>
+        </article>
+        <article class="price-card price-card--accent reveal">
+          <p class="price-card__tag">Чаще берут</p>
+          <h3>Love story</h3>
+          <p>2 часа · 60 фото</p>
+          <p class="price-card__value">15 000 ₽</p>
+          <a class="btn btn--primary" href="#contact">Выбрать</a>
+        </article>
+        <article class="price-card reveal">
+          <h3>Свадебный день</h3>
+          <p>8–10 часов · полный репортаж</p>
+          <p class="price-card__value">от 55 000 ₽</p>
+          <a class="btn btn--ghost" href="#contact">Выбрать</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+      <div class="section-head reveal">
+        <p class="eyebrow">Отзывы</p>
+        <h2>Что говорят после съёмки</h2>
+      </div>
+      <div class="reviews__track reveal">
+        <blockquote class="review is-active">
+          <p>«Превью прислал в тот же вечер. Кадры живые, без лишней постановки.»</p>
+          <cite>— Дарья и Никита</cite>
+        </blockquote>
+        <blockquote class="review">
+          <p>«На деловой съёмке всё быстро и по делу. Фото сразу в резюме.»</p>
+          <cite>— Артём</cite>
+        </blockquote>
+        <blockquote class="review">
+          <p>«Не чувствовали себя актёрами. Получились мы настоящие — и это видно.»</p>
+          <cite>— Алина</cite>
+        </blockquote>
+      </div>
+      <div class="reviews__dots" aria-label="Переключение отзывов">
+        <button type="button" class="dot is-active" aria-label="Отзыв 1"></button>
+        <button type="button" class="dot" aria-label="Отзыв 2"></button>
+        <button type="button" class="dot" aria-label="Отзыв 3"></button>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact__inner reveal">
+        <div>
+          <p class="eyebrow">Связаться</p>
+          <h2>Напишите дату и формат</h2>
+          <p>Отвечу с доступностью и сметой. Обычно в течение дня.</p>
+          <div class="contact__links">
+            <a class="btn btn--primary" href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+            <a class="btn btn--ghost" href="tel:+79007654321">+7 900 765-43-21</a>
+          </div>
+        </div>
+        <form class="form" novalidate>
+          <label>Имя<input name="name" required placeholder="Ваше имя" autocomplete="name" /></label>
+          <label>Дата / формат<input name="date" required placeholder="Например: свадьба, 12 июня" /></label>
+          <label>Комментарий<textarea name="note" rows="3" placeholder="Локация, пожелания — по желанию"></textarea></label>
+          <button class="btn btn--primary" type="submit">Отправить заявку</button>
+          <p class="form-note" hidden>Заявка принята — демо для портфолио.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© Mark Orlov · демо-концепт</span>
+    <span>Москва · выезд по России</span>
+  </footer>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button type="button" class="lightbox__close" aria-label="Закрыть">×</button>
+    <button type="button" class="lightbox__prev" aria-label="Назад">‹</button>
+    <img class="lightbox__img" alt="" />
+    <button type="button" class="lightbox__next" aria-label="Вперёд">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
