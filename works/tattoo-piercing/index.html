@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>INKROOM — тату и пирсинг · DEMO</title>
+  <meta name="description" content="Демо-сайт студии тату и пирсинга: портфолио, стили, запись." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="demo-bar" role="status">
+    <span class="demo-bar__pulse" aria-hidden="true"></span>
+    DEMO · Портфолио-макет · Не настоящая студия · Цены и мастера вымышлены
+  </div>
+
+  <header class="top">
+    <a class="logo" href="#top">INK<em>ROOM</em></a>
+    <nav class="nav" id="nav">
+      <a href="#work">Работы</a>
+      <a href="#styles">Стили</a>
+      <a href="#pierce">Пирсинг</a>
+      <a href="#artists">Мастера</a>
+      <a href="#book">Запись</a>
+    </nav>
+    <a class="btn btn--nav glow-btn" href="#book" data-glow>Записаться</a>
+    <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false"><span></span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__media" aria-hidden="true">
+        <img
+          src="img/hero.jpg"
+          alt=""
+          width="1800"
+          height="1200"
+        />
+        <div class="hero__scrim"></div>
+      </div>
+      <div class="hero__copy">
+        <p class="brand">INKROOM</p>
+        <h1>Тату и пирсинг с характером линии</h1>
+        <p class="lead">Студия, где рисунок держит форму, а стерильность — как ритуал. Подберём стиль и место под тебя.</p>
+        <div class="actions">
+          <a class="btn btn--primary glow-btn" href="#book" data-glow>Записаться</a>
+          <a class="btn btn--ghost glow-btn" href="#work" data-glow>Смотреть работы</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="strip" aria-label="Факты">
+      <p><strong>7</strong> лет студии</p>
+      <p><strong>12+</strong> мастеров</p>
+      <p><strong>100%</strong> одноразовый инструмент</p>
+      <p><strong>DEMO</strong> · вымышленный бренд</p>
+    </section>
+
+    <section class="work wrap" id="work">
+      <div class="section-head">
+        <h2>Работы</h2>
+        <p>Фильтр по стилю — клик подсвечивает активный чип и пересобирает сетку.</p>
+      </div>
+      <div class="filters" role="tablist" aria-label="Стили работ">
+        <button type="button" class="chip is-on glow-btn" data-filter="all" data-glow>Все</button>
+        <button type="button" class="chip glow-btn" data-filter="blackwork" data-glow>Blackwork</button>
+        <button type="button" class="chip glow-btn" data-filter="fineline" data-glow>Fine line</button>
+        <button type="button" class="chip glow-btn" data-filter="neo" data-glow>Neotrad</button>
+        <button type="button" class="chip glow-btn" data-filter="pierce" data-glow>Пирсинг</button>
+      </div>
+      <div class="grid" id="gallery">
+        <button type="button" class="shot" data-cat="blackwork" data-full="img/g5.jpg">
+          <img src="img/g5.jpg" alt="Blackwork на спине" loading="lazy" />
+          <span>Blackwork</span>
+        </button>
+        <button type="button" class="shot" data-cat="fineline" data-full="img/g1.jpg">
+          <img src="img/g1.jpg" alt="Fine line рукав" loading="lazy" />
+          <span>Fine line</span>
+        </button>
+        <button type="button" class="shot" data-cat="neo" data-full="img/g4.jpg">
+          <img src="img/g4.jpg" alt="Цветной neotrad рукав" loading="lazy" />
+          <span>Neotrad</span>
+        </button>
+        <button type="button" class="shot" data-cat="pierce" data-full="img/g6.jpg">
+          <img src="img/g6.jpg" alt="Пирсинг уха" loading="lazy" />
+          <span>Пирсинг</span>
+        </button>
+        <button type="button" class="shot" data-cat="blackwork" data-full="img/g7.jpg">
+          <img src="img/g7.jpg" alt="Цветочный blackwork рукав" loading="lazy" />
+          <span>Blackwork</span>
+        </button>
+        <button type="button" class="shot" data-cat="fineline" data-full="img/g8.jpg">
+          <img src="img/g8.jpg" alt="Минималистичный fine line" loading="lazy" />
+          <span>Fine line</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="styles wrap" id="styles">
+      <div class="section-head">
+        <h2>Подбор стиля</h2>
+        <p>Кликай варианты — активный блок светится, справа обновляется подсказка мастера.</p>
+      </div>
+      <div class="style-board">
+        <div class="style-picks" id="style-picks">
+          <button type="button" class="style-card is-on glow-btn" data-style="blackwork" data-glow>
+            <strong>Blackwork</strong>
+            <span>Плотный чёрный, графика, крупный масштаб</span>
+          </button>
+          <button type="button" class="style-card glow-btn" data-style="fineline" data-glow>
+            <strong>Fine line</strong>
+            <span>Тонкая игла, орнамент, минимализм</span>
+          </button>
+          <button type="button" class="style-card glow-btn" data-style="neo" data-glow>
+            <strong>Neo-traditional</strong>
+            <span>Цвет, объём, смелые контуры</span>
+          </button>
+          <button type="button" class="style-card glow-btn" data-style="letter" data-glow>
+            <strong>Lettering</strong>
+            <span>Шрифт, цитаты, кастомный леттеринг</span>
+          </button>
+        </div>
+        <aside class="style-hint" id="style-hint" aria-live="polite">
+          <p class="style-hint__tag">Рекомендация</p>
+          <h3 id="hint-title">Blackwork</h3>
+          <p id="hint-text">Лучше смотрится на предплечье, голени и спине. Сессия от 3 часов. После ухода — матовая плёнка 5 дней.</p>
+          <a class="btn btn--primary glow-btn" href="#book" data-glow>Записаться на этот стиль</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="pierce wrap" id="pierce">
+      <div class="section-head">
+        <h2>Зоны пирсинга</h2>
+        <p>Наведи / тапни точку — зона подсветится, справа откроется прайс.</p>
+      </div>
+      <div class="pierce-layout">
+        <div class="body-map" id="body-map">
+          <svg viewBox="0 0 280 420" role="img" aria-label="Схема зон пирсинга">
+            <ellipse class="body" cx="140" cy="70" rx="42" ry="52" />
+            <rect class="body" x="95" y="120" width="90" height="140" rx="28" />
+            <rect class="body" x="55" y="130" width="36" height="120" rx="16" />
+            <rect class="body" x="189" y="130" width="36" height="120" rx="16" />
+            <rect class="body" x="108" y="255" width="28" height="130" rx="12" />
+            <rect class="body" x="144" y="255" width="28" height="130" rx="12" />
+          </svg>
+          <button type="button" class="hotspot glow-btn is-on" data-zone="ear" style="left:62%;top:14%" data-glow aria-label="Ухо"></button>
+          <button type="button" class="hotspot glow-btn" data-zone="nose" style="left:50%;top:18%" data-glow aria-label="Нос"></button>
+          <button type="button" class="hotspot glow-btn" data-zone="lip" style="left:50%;top:22%" data-glow aria-label="Губа"></button>
+          <button type="button" class="hotspot glow-btn" data-zone="navel" style="left:50%;top:48%" data-glow aria-label="Пупок"></button>
+          <button type="button" class="hotspot glow-btn" data-zone="nipple" style="left:42%;top:38%" data-glow aria-label="Сосок"></button>
+        </div>
+        <div class="zone-card" id="zone-card">
+          <p class="zone-card__eyebrow">Зона</p>
+          <h3 id="zone-title">Ухо · helix / lobe</h3>
+          <p id="zone-desc">Титановый микродермал или кольцо. Заживление 6–12 недель. DEMO-прайс.</p>
+          <p class="zone-price" id="zone-price">от 3 500 ₽</p>
+          <a class="btn btn--primary glow-btn" href="#book" data-glow>Записаться на пирсинг</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="artists wrap" id="artists">
+      <div class="section-head">
+        <h2>Мастера</h2>
+        <p>Наведи карточку — рамка и кнопка загораются.</p>
+      </div>
+      <div class="artists__row">
+        <article class="artist">
+          <img src="img/a1.jpg" alt="" loading="lazy" />
+          <div>
+            <h3>Марк В.</h3>
+            <p>Blackwork · графика</p>
+            <a class="link-glow" href="#book">К нему →</a>
+          </div>
+        </article>
+        <article class="artist">
+          <img src="img/a2.jpg" alt="" loading="lazy" />
+          <div>
+            <h3>Лера С.</h3>
+            <p>Fine line · орнамент</p>
+            <a class="link-glow" href="#book">К ней →</a>
+          </div>
+        </article>
+        <article class="artist">
+          <img src="img/a3.jpg" alt="" loading="lazy" />
+          <div>
+            <h3>Тимур К.</h3>
+            <p>Пирсинг · титан</p>
+            <a class="link-glow" href="#book">К нему →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="book wrap" id="book">
+      <div class="section-head">
+        <h2>Запись</h2>
+        <p>Демо-форма: поля подсвечиваются при фокусе, кнопка пульсирует после валидации.</p>
+      </div>
+      <form class="book-form" id="book-form" novalidate>
+        <label>
+          <span>Имя</span>
+          <input name="name" type="text" required autocomplete="name" placeholder="Как к тебе обращаться" />
+        </label>
+        <label>
+          <span>Телефон</span>
+          <input name="phone" type="tel" required autocomplete="tel" placeholder="+7" />
+        </label>
+        <label>
+          <span>Что нужно</span>
+          <select name="service" required>
+            <option value="">Выбери</option>
+            <option>Тату · консультация</option>
+            <option>Тату · сессия</option>
+            <option>Пирсинг</option>
+            <option>Коррекция / cover-up</option>
+          </select>
+        </label>
+        <label class="full">
+          <span>Комментарий</span>
+          <textarea name="note" rows="3" placeholder="Зона, размер, референс…"></textarea>
+        </label>
+        <p class="form-note">DEMO: заявка никуда не уходит — только показ интерфейса.</p>
+        <button class="btn btn--primary glow-btn btn--submit" type="submit" data-glow>Отправить заявку</button>
+        <p class="form-ok" id="form-ok" hidden>Готово. В реальном проекте ушло бы мастеру / в CRM.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p><strong>INKROOM</strong> · DEMO для портфолио</p>
+    <p>Не настоящая студия · Москва · вымышленные контакты</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button type="button" class="lightbox__close" aria-label="Закрыть">×</button>
+    <img id="lightbox-img" alt="" />
+  </div>
+
+  <a class="float-cta glow-btn" href="#book" data-glow>Запись</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
