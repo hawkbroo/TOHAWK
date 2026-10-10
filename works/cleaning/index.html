@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LUMA — клининг · DEMO</title>
+  <meta name="description" content="Демо-сайт клининговой службы: услуги, расчёт, запись." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <span class="orb orb--a"></span>
+    <span class="orb orb--b"></span>
+    <span class="orb orb--c"></span>
+  </div>
+
+  <div class="demo-bar" role="status">
+    <span class="demo-bar__dot" aria-hidden="true"></span>
+    DEMO · Портфолио-макет · Не настоящая служба · Цены вымышлены
+  </div>
+
+  <header class="top">
+    <a class="logo" href="#top">LU<em>MA</em></a>
+    <nav class="nav" id="nav">
+      <a href="#services">Услуги</a>
+      <a href="#compare">До / после</a>
+      <a href="#calc">Расчёт</a>
+      <a href="#gallery">Кадры</a>
+      <a href="#book">Запись</a>
+    </nav>
+    <a class="btn btn--nav glow-btn" href="#book" data-glow>Заказать</a>
+    <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false"><span></span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__media" aria-hidden="true">
+        <img src="img/hero.jpg" alt="" width="1800" height="1200" />
+        <div class="hero__scrim"></div>
+        <div class="hero__shine"></div>
+      </div>
+      <div class="hero__copy">
+        <p class="brand" data-split>LUMA</p>
+        <h1 class="hero__title">Клининг, после которого дома становится тише</h1>
+        <p class="lead">Квартиры, офисы и генеральная уборка. Приезжаем вовремя — оставляем воздух и свет.</p>
+        <div class="actions">
+          <a class="btn btn--primary glow-btn" href="#book" data-glow>Заказать уборку</a>
+          <a class="btn btn--ghost glow-btn" href="#calc" data-glow>Посчитать цену</a>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#services" aria-label="Дальше">
+        <span></span>
+      </a>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <figure><img src="img/kitchen-final.jpg" alt="" /><figcaption>Светлая кухня</figcaption></figure>
+        <figure><img src="img/living-final.jpg" alt="" /><figcaption>Гостиная</figcaption></figure>
+        <figure><img src="img/reno-final.jpg" alt="" /><figcaption>После ремонта</figcaption></figure>
+        <figure><img src="img/light-final.jpg" alt="" /><figcaption>Свет</figcaption></figure>
+        <figure><img src="img/deep-final.jpg" alt="" /><figcaption>Генеральная</figcaption></figure>
+        <figure><img src="img/office-final.jpg" alt="" /><figcaption>Офис</figcaption></figure>
+        <figure><img src="img/kitchen-final.jpg" alt="" /><figcaption>Светлая кухня</figcaption></figure>
+        <figure><img src="img/living-final.jpg" alt="" /><figcaption>Гостиная</figcaption></figure>
+        <figure><img src="img/reno-final.jpg" alt="" /><figcaption>После ремонта</figcaption></figure>
+        <figure><img src="img/light-final.jpg" alt="" /><figcaption>Свет</figcaption></figure>
+        <figure><img src="img/deep-final.jpg" alt="" /><figcaption>Генеральная</figcaption></figure>
+        <figure><img src="img/office-final.jpg" alt="" /><figcaption>Офис</figcaption></figure>
+      </div>
+    </div>
+
+    <section class="services wrap" id="services">
+      <div class="section-head reveal">
+        <h2>Услуги</h2>
+        <p>Наведи — картинка чуть оживает. Клик подставит тип в расчёт.</p>
+      </div>
+      <div class="svc-grid" id="svc-grid">
+        <button type="button" class="svc is-on glow-btn reveal" data-svc="regular" data-price="90" data-glow>
+          <span class="svc__media"><img src="img/regular-final.jpg" alt="" loading="lazy" /></span>
+          <strong>Поддерживающая</strong>
+          <span>от 90 ₽/м² · раз в неделю или разово</span>
+        </button>
+        <button type="button" class="svc glow-btn reveal" data-svc="deep" data-price="140" data-glow>
+          <span class="svc__media"><img src="img/deep-final.jpg" alt="" loading="lazy" /></span>
+          <strong>Генеральная</strong>
+          <span>от 140 ₽/м² · техника, санузлы, кухня</span>
+        </button>
+        <button type="button" class="svc glow-btn reveal" data-svc="after" data-price="160" data-glow>
+          <span class="svc__media"><img src="img/reno-final.jpg" alt="" loading="lazy" /></span>
+          <strong>После ремонта</strong>
+          <span>от 160 ₽/м² · пыль, следы краски, окна</span>
+        </button>
+        <button type="button" class="svc glow-btn reveal" data-svc="office" data-price="70" data-glow>
+          <span class="svc__media"><img src="img/office-final.jpg" alt="" loading="lazy" /></span>
+          <strong>Офис</strong>
+          <span>от 70 ₽/м² · вечер / выходные</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="compare wrap" id="compare">
+      <div class="section-head reveal">
+        <h2>До / после</h2>
+        <p>Тяни ползунок — кухня до и после уборки. DEMO.</p>
+      </div>
+      <div class="compare-stage reveal" id="compare-stage">
+        <img class="compare__after" src="img/after.jpg" alt="После уборки" />
+        <div class="compare__before" id="compare-before" style="--pos: 52%">
+          <img src="img/before.jpg" alt="До уборки" />
+        </div>
+        <input class="compare__range" id="compare-range" type="range" min="4" max="96" value="52" aria-label="Сравнить до и после" />
+        <span class="compare__tag compare__tag--before">До</span>
+        <span class="compare__tag compare__tag--after">После</span>
+        <span class="compare__handle" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <section class="calc wrap" id="calc">
+      <div class="section-head reveal">
+        <h2>Расчёт</h2>
+        <p>Площадь и тип — сумма пульсирует при изменении.</p>
+      </div>
+      <div class="calc-board reveal" id="calc-board">
+        <div class="calc-board__spot" aria-hidden="true"></div>
+        <label class="field">
+          <span>Площадь, м²</span>
+          <input id="area" type="range" min="20" max="200" value="55" />
+          <output id="area-out">55 м²</output>
+        </label>
+        <label class="field">
+          <span>Тип</span>
+          <select id="calc-type">
+            <option value="90" data-svc="regular">Поддерживающая</option>
+            <option value="140" data-svc="deep">Генеральная</option>
+            <option value="160" data-svc="after">После ремонта</option>
+            <option value="70" data-svc="office">Офис</option>
+          </select>
+        </label>
+        <div class="calc-sum">
+          <p class="calc-sum__label">Ориентир</p>
+          <p class="calc-sum__value" id="sum">4 950 ₽</p>
+          <p class="calc-sum__note">DEMO-прайс · без учёта окон и химчистки</p>
+          <a class="btn btn--primary glow-btn" href="#book" data-glow>Записаться на эту уборку</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="flow wrap" id="flow">
+      <div class="section-head reveal">
+        <h2>Как едем</h2>
+        <p>Три шага — линия дорисовывается при скролле.</p>
+      </div>
+      <ol class="steps" id="steps">
+        <li class="reveal"><span>01</span><div><h3>Заявка</h3><p>Площадь, адрес, удобное окно — форма или WhatsApp.</p></div></li>
+        <li class="reveal"><span>02</span><div><h3>Подтверждение</h3><p>Пишем слот и состав бригады в течение часа.</p></div></li>
+        <li class="reveal"><span>03</span><div><h3>Уборка</h3><p>Свои средства по запросу · фото «после» по желанию.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="gallery wrap" id="gallery">
+      <div class="section-head reveal">
+        <h2>Кадры</h2>
+        <p>Наведи — зум и мягкое свечение рамки.</p>
+      </div>
+      <div class="mosaic">
+        <button type="button" class="shot reveal" data-full="img/kitchen-final.jpg"><img src="img/kitchen-final.jpg" alt="Светлая кухня" loading="lazy" /><span>Светлая кухня</span></button>
+        <button type="button" class="shot shot--tall reveal" data-full="img/living-final.jpg"><img src="img/living-final.jpg" alt="Светлая гостиная" loading="lazy" /><span>Воздух в комнате</span></button>
+        <button type="button" class="shot reveal" data-full="img/light-final.jpg"><img src="img/light-final.jpg" alt="Мягкий свет" loading="lazy" /><span>Мягкий свет</span></button>
+        <button type="button" class="shot reveal" data-full="img/office-final.jpg"><img src="img/office-final.jpg" alt="Офис" loading="lazy" /><span>Офис</span></button>
+        <button type="button" class="shot reveal" data-full="img/process-final.jpg"><img src="img/process-final.jpg" alt="Процесс уборки" loading="lazy" /><span>Процесс</span></button>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about__media" aria-hidden="true">
+        <img src="img/living-final.jpg" alt="" loading="lazy" data-parallax />
+      </div>
+      <div class="about__copy reveal">
+        <h2>Светлая квартира без химического шлейфа</h2>
+        <p>Работаем в перчатках и сменной обуви. Можем приехать со своим инвентарём или вашими средствами.</p>
+      </div>
+    </section>
+
+    <section class="book wrap" id="book">
+      <div class="section-head reveal">
+        <h2>Запись</h2>
+        <p>Выбери окно времени — слот подсветится. Форма демо.</p>
+      </div>
+      <div class="slots reveal" id="slots" role="listbox" aria-label="Окно времени">
+        <button type="button" class="slot is-on" data-slot="09:00–12:00">09:00–12:00</button>
+        <button type="button" class="slot" data-slot="12:00–15:00">12:00–15:00</button>
+        <button type="button" class="slot" data-slot="15:00–18:00">15:00–18:00</button>
+        <button type="button" class="slot" data-slot="18:00–21:00">18:00–21:00</button>
+      </div>
+      <form class="book-form reveal" id="book-form" novalidate>
+        <input type="hidden" name="slot" id="book-slot" value="09:00–12:00" />
+        <label>
+          <span>Имя</span>
+          <input name="name" type="text" required autocomplete="name" placeholder="Как к вам обращаться" />
+        </label>
+        <label>
+          <span>Телефон</span>
+          <input name="phone" type="tel" required autocomplete="tel" placeholder="+7" />
+        </label>
+        <label>
+          <span>Услуга</span>
+          <select name="service" id="book-service" required>
+            <option value="">Выберите</option>
+            <option value="regular">Поддерживающая</option>
+            <option value="deep">Генеральная</option>
+            <option value="after">После ремонта</option>
+            <option value="office">Офис</option>
+          </select>
+        </label>
+        <label>
+          <span>Дата</span>
+          <input name="date" type="date" required />
+        </label>
+        <label class="full">
+          <span>Адрес / комментарий</span>
+          <textarea name="note" rows="3" placeholder="Район, этаж, код домофона…"></textarea>
+        </label>
+        <p class="form-note">В реальном проекте ушло бы в Telegram / WhatsApp / YCLIENTS.</p>
+        <button class="btn btn--primary glow-btn btn--submit" type="submit" data-glow>Отправить заявку</button>
+        <p class="form-ok" id="form-ok" hidden>Готово. Слот и заявка ушли бы мастеру.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p><strong>LUMA</strong> · DEMO для портфолио</p>
+    <p>Не настоящая служба · вымышленные контакты</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button type="button" class="lightbox__close" aria-label="Закрыть">×</button>
+    <img id="lightbox-img" alt="" />
+  </div>
+
+  <a class="float-cta glow-btn" href="#book" data-glow>Запись</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
