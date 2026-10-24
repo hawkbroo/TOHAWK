@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atelier Claire — салон красоты</title>
+  <meta name="description" content="Демо-сайт салона: калькулятор прайса, до/после, сторис, сертификат." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <p class="demo-banner">Демо для портфолио. Не настоящий салон · имена и цены вымышлены.</p>
+
+  <header class="top">
+    <a class="logo" href="#top">Atelier <em>Claire</em></a>
+    <nav class="nav" id="nav">
+      <a href="#stories">Сторис</a>
+      <a href="#compare">До / после</a>
+      <a href="#calc">Калькулятор</a>
+      <a href="#gift">Сертификат</a>
+      <a href="#board">Мастера</a>
+      <a href="#book">Запись</a>
+    </nav>
+    <a class="top__cta" href="#book">Записаться</a>
+    <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false"><span></span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__copy">
+        <p class="brand">Atelier Claire</p>
+        <h1>Салон, где не торопят и не перегружают трендами</h1>
+        <p class="lead">Стрижки, окрашивание, уход и маникюр. Подбираем образ под вас — запись за минуту.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="#book">Записаться</a>
+          <a class="btn btn--ghost" href="#calc">Посчитать прайс</a>
+        </div>
+        <ul class="meta"><li>Вт–Вс · 10:00–21:00</li><li>Москва · демо-адрес</li></ul>
+      </div>
+      <figure class="hero__photo">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80" alt="Интерьер салона" width="1200" height="900" />
+      </figure>
+    </section>
+
+    <section class="stories" id="stories" aria-label="Сторис салона">
+      <div class="section-head">
+        <p class="eyebrow">Новое</p>
+        <h2>Сторис дня</h2>
+      </div>
+      <div class="stories__rail" id="stories-rail">
+        <button type="button" class="story" data-story="0"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=400&q=80" alt="" /><span>Окрашивание</span></button>
+        <button type="button" class="story" data-story="1"><img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=400&q=80" alt="" /><span>Маникюр</span></button>
+        <button type="button" class="story" data-story="2"><img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=400&q=80" alt="" /><span>Укладка</span></button>
+        <button type="button" class="story" data-story="3"><img src="https://images.unsplash.com/photo-1521590832167-7bcbfaaae1b0?auto=format&fit=crop&w=400&q=80" alt="" /><span>Зал</span></button>
+      </div>
+    </section>
+
+    <section class="compare wrap" id="compare">
+      <div class="section-head">
+        <p class="eyebrow">Результат</p>
+        <h2>До / после</h2>
+        <p>Тяни ползунок — сравни кадры. Фичи такой ещё не было в других демо.</p>
+      </div>
+      <div class="ba" id="ba">
+        <img class="ba__after" src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?auto=format&fit=crop&w=1400&q=80" alt="После" />
+        <div class="ba__before-wrap" id="ba-before-wrap">
+          <img class="ba__before" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1400&q=80" alt="До" />
+        </div>
+        <input class="ba__range" id="ba-range" type="range" min="0" max="100" value="50" aria-label="Сравнение до и после" />
+        <span class="ba__label ba__label--l">До</span>
+        <span class="ba__label ba__label--r">После</span>
+      </div>
+    </section>
+
+    <section class="calc wrap" id="calc">
+      <div class="section-head">
+        <p class="eyebrow">Прайс</p>
+        <h2>Калькулятор услуги</h2>
+        <p>Выбери услугу и длину — сразу видна ориентировочная сумма.</p>
+      </div>
+      <div class="calc__panel">
+        <label>Услуга
+          <select id="calc-service">
+            <option value="2500" data-name="Стрижка и укладка">Стрижка и укладка</option>
+            <option value="5500" data-name="Окрашивание">Окрашивание</option>
+            <option value="3200" data-name="Уход">Уход и восстановление</option>
+            <option value="1800" data-name="Маникюр">Маникюр</option>
+          </select>
+        </label>
+        <label>Длина волос
+          <select id="calc-length">
+            <option value="1">До плеч · ×1</option>
+            <option value="1.25">Ниже плеч · ×1.25</option>
+            <option value="1.5">Длинные · ×1.5</option>
+          </select>
+        </label>
+        <div class="calc__result">
+          <span>Ориентир</span>
+          <strong id="calc-total">2 500 ₽</strong>
+          <p id="calc-note">Стрижка и укладка · до плеч</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gift wrap" id="gift">
+      <div class="section-head">
+        <p class="eyebrow">Подарок</p>
+        <h2>Собери сертификат</h2>
+      </div>
+      <div class="gift__grid">
+        <div class="gift__form">
+          <label>Сумма
+            <input type="range" id="gift-sum" min="3000" max="20000" step="500" value="5000" />
+          </label>
+          <p class="gift__sum-val">Сумма: <strong id="gift-sum-label">5 000 ₽</strong></p>
+          <label>Кому<input id="gift-to" placeholder="Имя получателя" maxlength="24" /></label>
+          <label>От кого<input id="gift-from" placeholder="Ваше имя" maxlength="24" /></label>
+          <label>Пожелание<textarea id="gift-msg" rows="2" maxlength="80" placeholder="Короткое пожелание"></textarea></label>
+        </div>
+        <div class="gift__card" id="gift-card" aria-live="polite">
+          <p class="gift__brand">Atelier Claire</p>
+          <p class="gift__title">Подарочный сертификат</p>
+          <p class="gift__amount" id="gift-card-sum">5 000 ₽</p>
+          <p class="gift__line">Для: <span id="gift-card-to">••••</span></p>
+          <p class="gift__line">От: <span id="gift-card-from">••••</span></p>
+          <p class="gift__wish" id="gift-card-msg">Ваше пожелание появится здесь</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="board wrap" id="board">
+      <div class="section-head">
+        <p class="eyebrow">Сегодня</p>
+        <h2>Кто свободен</h2>
+        <p>Живое табло слотов — кликни мастера, чтобы подставить в запись.</p>
+      </div>
+      <div class="board__list" id="board-list"></div>
+    </section>
+
+    <section class="book wrap" id="book">
+      <div class="book__card">
+        <h2>Запись</h2>
+        <p class="muted">Демо-форма. Мастера можно выбрать с табло выше.</p>
+        <form id="book-form" class="form">
+          <label>Мастер
+            <select id="book-master" name="master" required>
+              <option value="">Выберите</option>
+              <option>Алина — волосы</option>
+              <option>Мария — цвет</option>
+              <option>Катя — маникюр</option>
+            </select>
+          </label>
+          <label>День<input type="date" name="day" required /></label>
+          <label>Время
+            <select name="time" required>
+              <option value="">Выберите</option>
+              <option>11:00</option><option>13:00</option><option>16:00</option><option>19:00</option>
+            </select>
+          </label>
+          <label>Имя<input name="name" required placeholder="Как к вам обращаться" /></label>
+          <button class="btn btn--primary" type="submit">Отправить</button>
+          <p class="form-note" hidden>Заявка принята — демо для портфолио.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="story-modal" id="story-modal" hidden>
+    <div class="story-modal__bar"><span id="story-progress"></span></div>
+    <img id="story-img" alt="" />
+    <p id="story-cap"></p>
+    <button type="button" class="story-modal__close" id="story-close" aria-label="Закрыть">×</button>
+  </div>
+
+  <footer class="footer">
+    <span>Atelier Claire · демо</span>
+    <span>Вт–Вс · 10:00–21:00</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
