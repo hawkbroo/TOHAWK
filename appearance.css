@@ -131,3 +131,32 @@ html[data-theme="light"] .hero__actions .btn--ghost:hover { background:#fff9;bor
  .hero__actions .btn .hero__arrow { transition:none; }
  .hero__actions .btn:hover,.hero__actions .btn:hover .hero__arrow,.hero__actions .btn:focus-visible .hero__arrow { transform:none; }
 }
+/* Keep the rotating preview in the first phone viewport. Desktop stays untouched. */
+@media(max-width:560px) {
+ .hero { padding-top:78px; }
+ .hero__layout { flex:0;gap:10px;align-content:start;padding-bottom:18px; }
+ .hero__copy { padding-block:6px; }
+ .hero__eyebrow { margin-bottom:20px; }
+ .hero__title { margin-bottom:20px; }
+ .hero__details { margin-bottom:20px; }
+ .hero__lead { line-height:1.6; }
+ .hero__actions { margin-bottom:20px; }
+ .hero__stage { min-height:240px; }
+ .hero__frame-body { min-height:202px;padding-bottom:24px; }
+}
+@media(max-width:360px) {
+ .hero__actions { gap:8px; }
+ .hero__actions .btn { font-size:10px;gap:8px;padding:6px 6px 6px 10px;min-height:44px; }
+ .hero__actions .btn .hero__arrow { width:26px;height:26px; }
+}
+@media(max-width:560px) and (max-height:640px) {
+ .hero { padding-top:72px; }
+ .hero__eyebrow { margin-bottom:14px; }
+ .hero__title { font-size:clamp(34px,9.6vw,42px);margin-bottom:16px; }
+ .hero__details { margin-bottom:16px; }
+ .hero__actions { margin-bottom:16px; }
+ .hero__stage { min-height:210px; }
+ .hero__frame-body { min-height:174px;padding-bottom:16px; }
+ .hero__frame-label { font-size:1.5rem; }
+ .hero__frame-line { margin-top:12px; }
+}
