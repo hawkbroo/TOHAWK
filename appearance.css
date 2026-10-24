@@ -160,3 +160,15 @@ html[data-theme="light"] .hero__actions .btn--ghost:hover { background:#fff9;bor
  .hero__frame-label { font-size:1.5rem; }
  .hero__frame-line { margin-top:12px; }
 }
+
+/* Keep the fill stable while hovering: no gradient-to-solid background flash. */
+html[data-theme="dark"] .hero__actions .btn--fill,
+html[data-theme="dark"] .hero__actions .btn--fill:hover {
+ background:linear-gradient(140deg,#e1f7a4,#c9e986);
+ transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+html[data-theme="light"] .hero__actions .btn--fill,
+html[data-theme="light"] .hero__actions .btn--fill:hover {
+ background:linear-gradient(145deg,#d8ee95,#c7e47b);
+ transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
